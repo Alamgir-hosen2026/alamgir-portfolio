@@ -1,508 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Alamgir Hosen | Android App Developer</title>
-    <meta name="description"
-          content="Explore Android applications developed by Alamgir Hosen. Discover useful mobile apps and visit their Google Play Store pages.">
+    <meta name="description" content="Explore Android applications developed by Alamgir Hosen. Discover useful mobile apps and visit their Google Play Store pages.">
     <meta name="theme-color" content="#0b1020">
-
     <style>
-        :root {
-            --bg: #080d19;
-            --panel: #111a2b;
-            --panel-hover: #17243a;
-            --text: #f4f7ff;
-            --muted: #a6b3c9;
-            --accent: #63a5ff;
-            --border: #26334a;
-            --green: #6ee7b7;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        .container {
-            width: min(1100px, 92%);
-            margin: auto;
-        }
-
-        /* Header */
-        header {
-            padding: 18px 0;
-            border-bottom: 1px solid var(--border);
-            background: #0b1020;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-        }
-
-        .brand {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 19px;
-            font-weight: bold;
-        }
-
-        .nav-link {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-        }
-
-        /* Banner */
-        
-.banner {
-    margin-top: 24px;
-    width: 100%;
-    aspect-ratio: 1024 / 500;
-    height: auto;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    background: #101728;
-    border: 1px solid var(--border);
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-}
-
-
-        /* Profile */
-        .profile {
-            text-align: center;
-            padding: 30px 15px 35px;
-        }
-
-        .profile h1 {
-            margin: 0 0 4px;
-            font-size: clamp(28px, 5vw, 40px);
-        }
-
-        .role {
-            color: var(--accent);
-            margin: 0 0 18px;
-        }
-
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 10px 22px;
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        .contact a {
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            color: var(--accent);
-        }
-
-        /* Applications */
-        .apps-section {
-            padding: 24px 0 65px;
-        }
-
-        .section-heading {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: end;
-            gap: 10px;
-            margin-bottom: 24px;
-        }
-
-        .section-heading h2 {
-            margin: 0;
-            font-size: clamp(23px, 4vw, 30px);
-        }
-
-        .section-heading p {
-            margin: 5px 0 0;
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .app-card {
-            min-width: 0;
-            padding: 20px 14px;
-            text-align: center;
-            border: 1px solid var(--border);
-            background: var(--panel);
-            border-radius: 17px;
-            transition: transform .2s, border-color .2s,
-                        background .2s;
-        }
-
-        .app-card:hover {
-            transform: translateY(-5px);
-            background: var(--panel-hover);
-            border-color: #4779b9;
-        }
-
-        .app-logo-link {
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .app-logo {
-            width: 88px;
-            height: 88px;
-            object-fit: contain;
-            border-radius: 20px;
-            display: block;
-            margin: 0 auto 15px;
-            background: #202d43;
-        }
-
-        .app-placeholder {
-            width: 88px;
-            height: 88px;
-            margin: 0 auto 15px;
-            display: grid;
-            place-items: center;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #254a7c, #18263c);
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .app-card h3 {
-            font-size: 15px;
-            line-height: 1.5;
-            min-height: 45px;
-            margin: 0 0 13px;
-            overflow-wrap: anywhere;
-        }
-
-        .store-link {
-            display: inline-block;
-            padding: 8px 12px;
-            border-radius: 8px;
-            background: #203b5f;
-            color: #dbeafe;
-            text-decoration: none;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .store-link:hover {
-            background: #2b5484;
-        }
-
-        .store-link.disabled {
-            color: var(--muted);
-            background: #202a3a;
-            cursor: default;
-        }
-
-        .empty-message {
-            color: var(--muted);
-            text-align: center;
-            grid-column: 1 / -1;
-            padding: 25px;
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--border);
-            text-align: center;
-            padding: 25px 12px;
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        @media (max-width: 850px) {
-            .app-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-                gap: 13px;
-            }
-
-            .banner {
-                height: 240px;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .app-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 12px;
-            }
-
-            .app-card {
-                padding: 17px 10px;
-            }
-
-            .app-logo,
-            .app-placeholder {
-                width: 76px;
-                height: 76px;
-            }
-
-            .banner {
-                height: 175px;
-                margin-top: 15px;
-                border-radius: 14px;
-            }
-
-            .profile {
-                padding-top: 25px;
-            }
-
-            .contact {
-                flex-direction: column;
-                gap: 7px;
-            }
-
-            .nav-link {
-                font-size: 12px;
-            }
-        }
+        :root { --bg:#080d19; --panel:#111a2b; --panel-hover:#17243a; --text:#f4f7ff; --muted:#a6b3c9; --accent:#63a5ff; --border:#26334a; }
+        * { box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+        a { color:inherit; }
+        .container { width:min(1100px,92%); margin:auto; }
+        header { padding:18px 0; border-bottom:1px solid var(--border); background:#0b1020; }
+        .nav { display:flex; align-items:center; justify-content:space-between; gap:15px; }
+        .brand { color:var(--text); text-decoration:none; font-size:19px; font-weight:bold; }
+        .nav-link { color:var(--muted); text-decoration:none; font-size:14px; }
+        .nav-link:hover { color:var(--accent); }
+        .banner { margin-top:24px; width:100%; aspect-ratio:1024 / 500; border-radius:20px; overflow:hidden; background:#101728; border:1px solid var(--border); }
+        .banner img { width:100%; height:100%; display:block; object-fit:contain; }
+        .profile { text-align:center; padding:30px 15px 35px; }
+        .profile h1 { margin:0 0 4px; font-size:clamp(28px,5vw,40px); }
+        .role { color:var(--accent); margin:0 0 18px; }
+        .contact { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 22px; color:var(--muted); font-size:14px; }
+        .contact a { text-decoration:none; }
+        .contact a:hover { color:var(--accent); }
+        .apps-section { padding:24px 0 65px; }
+        .section-heading { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:end; gap:10px; margin-bottom:24px; }
+        .section-heading h2 { margin:0; font-size:clamp(23px,4vw,30px); }
+        .section-heading p { margin:5px 0 0; color:var(--muted); font-size:14px; }
+        .app-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+        .app-card { min-width:0; padding:20px 14px; text-align:center; border:1px solid var(--border); background:var(--panel); border-radius:17px; transition:transform .2s,border-color .2s,background .2s; }
+        .app-card:hover { transform:translateY(-5px); background:var(--panel-hover); border-color:#4779b9; }
+        .app-logo-link { display:inline-block; text-decoration:none; }
+        .app-logo { width:88px; height:88px; object-fit:contain; border-radius:20px; display:block; margin:0 auto 15px; background:#202d43; }
+        .app-placeholder { width:88px; height:88px; margin:0 auto 15px; display:grid; place-items:center; border-radius:20px; background:linear-gradient(135deg,#254a7c,#18263c); color:white; font-size:30px; font-weight:bold; }
+        .app-card h3 { font-size:15px; line-height:1.5; min-height:45px; margin:0 0 13px; overflow-wrap:anywhere; }
+        .card-actions { display:flex; flex-direction:column; align-items:center; gap:8px; }
+        .store-link { display:inline-block; padding:8px 12px; border-radius:8px; background:#203b5f; color:#dbeafe; text-decoration:none; font-size:12px; font-weight:bold; }
+        .store-link:hover { background:#2b5484; }
+        .details-link { background:#202a3a; border:1px solid var(--border); }
+        .empty-message { color:var(--muted); text-align:center; grid-column:1/-1; padding:25px; }
+        footer { border-top:1px solid var(--border); text-align:center; padding:25px 12px; color:var(--muted); font-size:13px; }
+        footer p { margin:5px 0; }
+        @media (max-width:850px) { .app-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; } }
+        @media (max-width:560px) { .app-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; } .app-card { padding:17px 10px; } .app-logo,.app-placeholder { width:76px; height:76px; } .banner { margin-top:15px; border-radius:14px; } .profile { padding-top:25px; } .contact { flex-direction:column; gap:7px; } .nav-link { font-size:12px; } }
     </style>
 </head>
-
 <body>
-
-    <header>
-        <div class="container nav">
-            <a class="brand" href="#">Alamgir Hosen</a>
-            <a class="nav-link" href="#applications">My Applications ↓</a>
-        </div>
-    </header>
-
-    <main class="container">
-
-        <!-- Replace banner.jpg with your banner photo -->
-        <section class="banner" aria-label="Portfolio banner">
-            <img
-                src="banner.png"
-                alt="Alamgir Hosen Portfolio Banner"
-                onerror="this.style.display='none';">
-        </section>
-
-        <!-- Your profile information -->
-        <section class="profile">
-            <h1>Alamgir Hosen</h1>
-            <p class="role">Android App Developer</p>
-
-            <div class="contact">
-                <a href="tel:01980875814">
-                    Phone: 01980875814
-                </a>
-
-                <a href="mailto:alamgirhusenbd19@gmail.com">
-                    Gmail: alamgirhusenbd19@gmail.com
-                </a>
-            </div>
-        </section>
-
-        <!-- Application cards are created from the list below -->
-        <section class="apps-section" id="applications">
-            <div class="section-heading">
-                <div>
-                    <h2>My Android Applications</h2>
-                    <p>Explore my apps and discover useful tools.</p>
-                </div>
-            </div>
-
-            <div class="app-grid" id="appGrid"></div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© <span id="year"></span> Alamgir Hosen. All rights reserved.</p>
-        <p>Designed and developed with care.</p>
-    </footer>
-
-    <script>
-        /*
-         * APP LIST
-         *
-         * To add a new app, copy one object and edit its details.
-         * Use the real Google Play Store URL when the app is published.
-         */
-
-        
+<header><div class="container nav"><a class="brand" href="./">Alamgir Hosen</a><a class="nav-link" href="#applications">My Applications ↓</a></div></header>
+<main class="container">
+    <section class="banner" aria-label="Portfolio banner"><img src="banner.png" alt="Alamgir Hosen Portfolio Banner" onerror="this.style.display='none';"></section>
+    <section class="profile"><h1>Alamgir Hosen</h1><p class="role">Android App Developer</p><div class="contact"><a href="tel:01980875814">Phone: 01980875814</a><a href="mailto:alamgirhusenbd19@gmail.com">Gmail: alamgirhusenbd19@gmail.com</a></div></section>
+    <section class="apps-section" id="applications"><div class="section-heading"><div><h2>My Android Applications</h2><p>Explore my apps and discover useful tools.</p></div></div><div class="app-grid" id="appGrid"></div></section>
+</main>
+<footer><p>© <span id="year"></span> Alamgir Hosen. All rights reserved.</p><p>Designed and developed with care.</p></footer>
+<script>
+// Existing Google Play links and uploaded logo filenames have been preserved.
 const apps = [
-    {
-        name: "Baby Memory Book",
-        logo: "app1.png.jpg",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.alamgirappstudio.babymemorybook"
-    },
-    {
-        name: "Family Protection Manager+",
-        logo: "app2.png.jpg",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.alamgirappstudio.familyprotection"
-    },
-    {
-        name: "Freelancer Client CRM Pro",
-        logo: "app3.png.jpg",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.alamgirappstudio.freelancercrmpro"
-    },
-    {
-        name: "Home Maintenance & Warranty Pro",
-        logo: "app4.png.jpg",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.alamgirappstudio.homemaintenancepro"
-    },
-    {
-        name: "Medicine App",
-        logo: "app5.png.jpg",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.alamgir.medicineinfo_new"
-    },
-    {
-        name: "Bangla Rashifal",
-        logo: "app6.png.jpg",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.alamgir.rashifal_new"
-    },
-    {
-        name: "Life Simulator One",
-        logo: "app7.png.png",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.alamgirappstudio.lifesimulatorone"
-    },
-    {
-        name: "Dream App",
-        logo: "app8.png.jpg",
-        playStoreUrl: "https://play.google.com/store/apps/details?id=com.alamgir.shopnerbekkha"
-    }
+    { name:"Baby Memory Book", logo:"app1.png.jpg", slug:"baby-memory-book", playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.babymemorybook" },
+    { name:"Family Protection Manager+", logo:"app2.png.jpg", slug:"family-protection", playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.familyprotection" },
+    { name:"Freelancer Client CRM Pro", logo:"app3.png.jpg", slug:"freelancer-crm", playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.freelancercrmpro" },
+    { name:"Home Maintenance & Warranty Pro", logo:"app4.png.jpg", slug:"home-maintenance", playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.homemaintenancepro" },
+    { name:"Medicine App", logo:"app5.png.jpg", slug:"medicine-app", playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgir.medicineinfo_new" },
+    { name:"Bangla Rashifal", logo:"app6.png.jpg", slug:"bangla-rashifal", playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgir.rashifal_new" },
+    { name:"Life Simulator One", logo:"app7.png.png", slug:"life-simulator", playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.lifesimulatorone" },
+    { name:"Dream App", logo:"app8.png.jpg", slug:"dream-app", playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgir.shopnerbekkha" }
 ];
-
-
-        const appGrid = document.getElementById("appGrid");
-
-        function createAppCard(app) {
-            const card = document.createElement("article");
-            card.className = "app-card";
-
-            const logo = document.createElement("img");
-            logo.className = "app-logo";
-            logo.src = app.logo;
-            logo.alt = app.name + " app icon";
-            logo.loading = "lazy";
-
-            const placeholder = document.createElement("div");
-            placeholder.className = "app-placeholder";
-            placeholder.textContent =
-                app.name.trim().charAt(0).toUpperCase();
-            placeholder.setAttribute("aria-label", app.name + " icon");
-
-            logo.onerror = function () {
-                logo.replaceWith(placeholder);
-            };
-
-            const title = document.createElement("h3");
-            title.textContent = app.name;
-
-            const link = document.createElement("a");
-            link.className = "store-link";
-
-            if (
-                app.playStoreUrl &&
-                /^https:\/\/play\.google\.com\/store\/apps\/details\?id=[A-Za-z0-9._]+(?:&|$)/.test(app.playStoreUrl)
-            ) {
-                link.href = app.playStoreUrl;
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
-                link.textContent = "View on Play Store ↗";
-
-                const logoLink = document.createElement("a");
-                logoLink.className = "app-logo-link";
-                logoLink.href = app.playStoreUrl;
-                logoLink.target = "_blank";
-                logoLink.rel = "noopener noreferrer";
-                logoLink.setAttribute(
-                    "aria-label",
-                    "Open " + app.name + " on Google Play"
-                );
-
-                logoLink.appendChild(logo);
-                card.appendChild(logoLink);
-            } else {
-                link.href = "#";
-                link.textContent = "Coming Soon";
-                link.classList.add("disabled");
-                link.setAttribute("aria-disabled", "true");
-                link.addEventListener("click", function (event) {
-                    event.preventDefault();
-                });
-
-                card.appendChild(logo);
-            }
-
-            card.appendChild(title);
-            card.appendChild(link);
-
-            return card;
-        }
-
-        function renderApps() {
-            appGrid.replaceChildren();
-
-            if (apps.length === 0) {
-                const message = document.createElement("p");
-                message.className = "empty-message";
-                message.textContent = "New applications coming soon.";
-                appGrid.appendChild(message);
-                return;
-            }
-
-            apps.forEach(function (app) {
-                appGrid.appendChild(createAppCard(app));
-            });
-        }
-
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
-
-        renderApps();
-    </script>
-
+const appGrid = document.getElementById("appGrid");
+function createAppCard(app) {
+    const card = document.createElement("article"); card.className = "app-card";
+    const logoLink = document.createElement("a"); logoLink.className = "app-logo-link"; logoLink.href = app.playStoreUrl; logoLink.target = "_blank"; logoLink.rel = "noopener noreferrer"; logoLink.setAttribute("aria-label", "Open " + app.name + " on Google Play");
+    const logo = document.createElement("img"); logo.className = "app-logo"; logo.src = app.logo; logo.alt = app.name + " app icon"; logo.loading = "lazy";
+    const placeholder = document.createElement("div"); placeholder.className = "app-placeholder"; placeholder.textContent = app.name.trim().charAt(0).toUpperCase(); placeholder.setAttribute("aria-label", app.name + " icon");
+    logo.onerror = function () { logo.replaceWith(placeholder); };
+    logoLink.appendChild(logo);
+    const title = document.createElement("h3"); title.textContent = app.name;
+    const actions = document.createElement("div"); actions.className = "card-actions";
+    const details = document.createElement("a"); details.className = "store-link details-link"; details.href = "app-details.html?app=" + encodeURIComponent(app.slug); details.textContent = "View Details →";
+    const store = document.createElement("a"); store.className = "store-link"; store.href = app.playStoreUrl; store.target = "_blank"; store.rel = "noopener noreferrer"; store.textContent = "View on Play Store ↗";
+    actions.append(details, store); card.append(logoLink, title, actions); return card;
+}
+apps.forEach(app => appGrid.appendChild(createAppCard(app)));
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
