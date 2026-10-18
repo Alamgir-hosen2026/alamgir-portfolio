@@ -78,7 +78,15 @@ const apps = {
  }
 };
 const params=new URLSearchParams(location.search);
-const key=params.get("app") || "baby-memory-book";
+const requestedKey=params.get("app") || "baby-memory-book";
+// Accept both the current slugs and the older links already used by index.html.
+const aliases={
+ "family-protection":"family-protection-manager",
+ "freelancer-crm":"freelancer-client-crm-pro",
+ "home-maintenance":"home-maintenance-warranty-pro",
+ "life-simulator":"life-simulator-one"
+};
+const key=aliases[requestedKey] || requestedKey;
 const a=apps[key];
 const root=document.getElementById("app");
 document.getElementById("year").textContent=new Date().getFullYear();
