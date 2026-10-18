@@ -1,24 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#080d19"><meta name="description" content="App details, features and Google Play links for Android apps by Alamgir Hosen."><title>App Details | Alamgir Hosen</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
+<title>App Details | Alamgir App Studio</title>
 <style>
-:root{--bg:#080d19;--panel:#111a2b;--border:#26334a;--text:#f4f7ff;--muted:#a6b3c9;--accent:#63a5ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.7}a{color:inherit}.container{width:min(900px,92%);margin:auto}header{padding:18px 0;border-bottom:1px solid var(--border)}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:bold;text-decoration:none;font-size:18px}.back-link{color:var(--accent);text-decoration:none;font-size:14px}main{padding:38px 0 60px}.hero{text-align:center;padding:30px 20px;border:1px solid var(--border);border-radius:22px;background:radial-gradient(circle at top,#203d65,transparent 65%),var(--panel)}.app-logo{width:120px;height:120px;object-fit:contain;border-radius:25px;background:#202d43}.app-placeholder{width:120px;height:120px;display:grid;place-items:center;margin:auto;border-radius:25px;background:#203b5f;font-size:40px;font-weight:bold}h1{font-size:clamp(27px,5vw,38px);line-height:1.3;overflow-wrap:anywhere;margin:20px 0 8px}.subtitle{color:var(--muted);margin:0}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}.button{display:inline-block;padding:11px 18px;border-radius:9px;background:#244c7b;text-decoration:none;font-size:14px;font-weight:bold}.button.primary{background:#2563eb;color:white}.button.secondary{background:#202a3a;border:1px solid var(--border)}.button:hover{filter:brightness(1.18)}.section{margin-top:25px;padding:25px;background:var(--panel);border:1px solid var(--border);border-radius:16px}.section h2{font-size:21px;margin:0 0 12px}.section p{color:var(--muted);margin-bottom:0}.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0;list-style:none}.features li{padding:13px;background:#172338;border-radius:10px;border:1px solid var(--border)}.features li:before{content:"✓ ";color:#6ee7b7;font-weight:bold}.message{text-align:center;padding:70px 15px}.message a{color:var(--accent)}footer{text-align:center;color:var(--muted);border-top:1px solid var(--border);padding:24px 12px;font-size:13px}@media(max-width:550px){.features{grid-template-columns:1fr}.section{padding:19px}.hero{padding:25px 14px}}
-</style></head>
-<body><header><div class="container nav"><a class="brand" href="./">Alamgir Hosen</a><a class="back-link" href="./#applications">← All Applications</a></div></header><main class="container" id="appContent"></main><footer><p>© <span id="year"></span> Alamgir Hosen. All rights reserved.</p><p>Android Applications Portfolio</p></footer>
+:root{--bg:#080d1b;--panel:#111a2e;--panel2:#17223a;--text:#f4f7ff;--muted:#aebbd2;--accent:#69e0c0;--line:#293752}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#172747 0,#080d1b 48%);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+a{color:inherit}.wrap{width:min(1050px,92%);margin:auto}.top{padding:22px 0;border-bottom:1px solid var(--line)}.top a{text-decoration:none;color:var(--accent);font-weight:700}
+.hero{padding:48px 0 28px;display:flex;align-items:center;gap:26px}.logo{width:116px;height:116px;object-fit:cover;border-radius:26px;border:1px solid var(--line);box-shadow:0 12px 32px #0006}.eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(28px,5vw,42px);line-height:1.2;margin:8px 0}.subtitle{color:var(--muted);margin:0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.btn{display:inline-block;padding:11px 18px;border-radius:12px;text-decoration:none;font-weight:700;background:var(--accent);color:#07151a}.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;margin:16px 0 46px}.card{background:linear-gradient(145deg,#121d32,#0f1729);border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:0 12px 35px #0002}.card h2{font-size:22px;margin:0 0 14px}.card p{color:#d8e1f0;margin:0 0 12px}.features{list-style:none;padding:0;margin:0;display:grid;gap:11px}.features li{padding:11px 13px;background:#17233a;border:1px solid #273653;border-radius:12px;color:#e8eef9}.features li:before{content:"✓";color:var(--accent);font-weight:bold;margin-right:10px}.note{color:var(--muted);font-size:13px;margin-top:16px}.not-found{text-align:center;padding:60px 20px}.footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);text-align:center;font-size:13px}
+@media(max-width:720px){.hero{align-items:flex-start;gap:16px;padding-top:32px}.logo{width:82px;height:82px;border-radius:18px}.grid{grid-template-columns:1fr}.card{padding:20px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="./">← Back to Portfolio</a></div></header>
+<main class="wrap" id="app"></main>
+<footer class="footer"><div class="wrap">© <span id="year"></span> Alamgir App Studio · Android Apps</div></footer>
 <script>
-// These Google Play URLs are copied from the existing portfolio. Privacy Policy URLs can be added later when known.
-const appDetails = {
- "baby-memory-book": {name:"Baby Memory Book",logo:"app1.png.jpg",category:"Family & Memories",description:"Baby Memory Book is designed to help organize precious baby memories and milestones.",features:["Organize baby memories","Record important milestones","Keep family notes together","Review special moments"],playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.babymemorybook",privacyUrl:""},
- "family-protection": {name:"Family Protection Manager+",logo:"app2.png.jpg",category:"Family & Safety",description:"Family Protection Manager+ helps users keep family-related information organized.",features:["Organize family information","Keep important notes together","Manage useful family details","Simple navigation"],playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.familyprotection",privacyUrl:""},
- "freelancer-crm": {name:"Freelancer Client CRM Pro",logo:"app3.png.jpg",category:"Business & Productivity",description:"Freelancer Client CRM Pro is intended to help freelancers organize client information and work details.",features:["Organize client records","Keep client details together","Manage work notes","Support an organized workflow"],playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.freelancercrmpro",privacyUrl:""},
- "home-maintenance": {name:"Home Maintenance & Warranty Pro",logo:"app4.png.jpg",category:"Home & Organization",description:"Keep home maintenance and warranty information organized in one place.",features:["Organize home records","Keep warranty information","Maintain service notes","Find important details easily"],playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.homemaintenancepro",privacyUrl:""},
- "medicine-app": {name:"Medicine App",logo:"app5.png.jpg",category:"Health & Reference",description:"Medicine App provides medicine-related information for reference. Always consult a qualified healthcare professional for medical advice.",features:["Browse medicine information","Review available medicine details","Use as a reference tool","Consult healthcare professionals for treatment decisions"],playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgir.medicineinfo_new",privacyUrl:""},
- "bangla-rashifal": {name:"Bangla Rashifal",logo:"app6.png.jpg",category:"Lifestyle & Astrology",description:"Bangla Rashifal provides horoscope-related content in Bangla for users interested in astrology.",features:["Bangla horoscope content","Explore astrology-related information","Simple browsing experience","Designed for Bangla readers"],playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgir.rashifal_new",privacyUrl:""},
- "life-simulator": {name:"Life Simulator One",logo:"app7.png.png",category:"Lifestyle & Simulation",description:"Explore Life Simulator One and its available lifestyle and simulation content.",features:["Explore the app interface","Discover available content","Simple navigation","Android-friendly experience"],playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.lifesimulatorone",privacyUrl:""},
- "dream-app": {name:"Dream App",logo:"app8.png.jpg",category:"Lifestyle & Reference",description:"Dream App offers dream-related content for users to explore. The description can be refined to match the app's exact features.",features:["Explore dream-related content","Browse available information","Simple navigation","Designed for convenient use"],playStoreUrl:"https://play.google.com/store/apps/details?id=com.alamgir.shopnerbekkha",privacyUrl:""}
+const apps = {
+ "baby-memory-book": {
+  title:"Baby Memory Book",category:"Parenting · Family",
+  logo:"app1.png.jpg",play:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.babymemorybook",
+  about:"Baby Memory Book is a digital keepsake for parents to record, organize, and treasure a child's early years. Save milestones, everyday memories, photos, growth records, and important care notes in one place. The app supports English and Bangla and includes local security plus manual data backup options.",
+  features:["Create profiles for multiple children","Record milestones and a dated memory timeline","Organize photo albums, video links, and voice memories","Track vaccinations, doctor visits, teeth, sleep, feeding, and diapers","Record weight, height, and head circumference with charts","Save family messages and future-dated time-capsule letters","Export selected memories and records as a PDF memory book","Protect access with PIN and supported fingerprint unlock","Manually back up written data using a Backup Code","Use the app in English or Bangla"],
+  note:"Backup note: the supplied description says photos, videos, and voice recordings stay on the device; only written/structured data is included in cloud backup."
+ },
+ "family-protection-manager": {
+  title:"Family Protection Manager+",category:"Safety · Productivity",
+  logo:"app2.png.jpg",play:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.familyprotection",
+  about:"Family Protection Manager+ is a family emergency and safety companion for keeping important contacts, medical details, documents, and emergency information organized and accessible. Information is stored locally first, so key details can remain available without an internet connection.",
+  features:["SOS screen for quick access to emergency contacts and medical ID","Store family, doctor, hospital, insurance, school, and other contacts","Keep medical notes such as blood group, allergies, medicines, and vaccinations","Organize important identity, insurance, property, and vehicle documents","Create customizable emergency checklists","Maintain profiles and emergency notes for family members","Track medicine doses and expiry dates","Use a PIN/fingerprint-protected encrypted password vault","Store vehicle and pet information","Export an emergency binder as PDF","Offline access and Backup Code-based backup/restore","Family sharing for the same binder"],
+  note:"Keep your Backup Code private. The supplied description states that the code is used to retrieve a backup."
+ },
+ "freelancer-client-crm-pro": {
+  title:"Freelancer Client CRM Pro",category:"Business · Productivity",
+  logo:"app3.png.jpg",play:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.freelancercrmpro",
+  about:"Freelancer Client CRM Pro is a client and project management app built for freelancers. Keep client details, project deadlines, invoices, payment status, and communication notes together instead of spreading them across notebooks and separate tools. It supports English and Bengali and is designed to work offline, with sync/backup options described in the app guide.",
+  features:["Store client names, email addresses, phone numbers, and notes","Track project budgets, deadlines, statuses, and task checklists","Create itemized invoices and share branded PDF files","Track invoices as Paid or Unpaid in your local currency","Receive reminders for upcoming deadlines and invoice due dates","Keep a communication log for client calls, messages, and emails","Back up data to Google Drive and restore it","Switch between English and Bengali","Use core features offline and sync when back online","View project status and payment totals in a reports dashboard","Add a business name and logo to invoice branding"],
+  note:"The supplied guide lists a subscription of $4.99 for 3 months. Check the Play Store listing for current pricing."
+ },
+ "home-maintenance-warranty-pro": {
+  title:"Home Maintenance & Warranty Pro",category:"Home · Productivity",
+  logo:"app4.png.jpg",play:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.homemaintenancepro",
+  about:"Home Maintenance & Warranty Pro helps homeowners, renters, and property managers organize appliances, warranties, receipts, repairs, expenses, and maintenance reminders in one place. Keep useful details for each device and review upcoming service needs without searching through drawers or old messages.",
+  features:["Manage appliances with brand, model, serial number, purchase date, and price","Track warranty dates and extended warranty coverage","Organize receipts, invoices, manuals, and installation guides","Set one-time or repeating maintenance reminders","Keep repair history, service details, and invoices","Track repair and maintenance expenses with charts","Generate a QR code for each appliance","Organize appliances by room and manage multiple homes","Back up data, photos, and documents using a Backup Code","Share home appliance data with family members","View appliance, warranty, and upcoming-service summaries","Premium options listed include unlimited homes/appliances, PDF export, reports, and ad-free use"],
+  note:"The supplied description lists a $9.99/year premium plan. Check Google Play for current price and availability."
+ },
+ "medicine-app": {
+  title:"BD Medicine Info: Quick Search",category:"Medical · Reference",
+  logo:"app5.png.jpg",play:"https://play.google.com/store/apps/details?id=com.alamgir.medicineinfo_new",
+  about:"BD Medicine Info: Quick Search provides an offline directory of more than 21,000 medicine entries related to Bangladesh. Search by medicine brand name, generic name, or company and review available reference information such as price, type, uses, dosage information, and side effects.",
+  features:["Browse a database of 21,000+ medicine entries","Search by brand name, generic name, or company","Access the directory offline after installation","View medicine type, generic name, and manufacturer details","Find listed price information and other available reference details","Use a simple interface for quick lookup"],
+  note:"Medical disclaimer: information is for general reference only. Always consult a qualified doctor or pharmacist before using medicine; do not use the app as a substitute for professional medical advice."
+ },
+ "bangla-rashifal": {
+  title:"Bangla Rashifal",category:"Lifestyle · Reference",
+  logo:"app6.png.jpg",play:"https://play.google.com/store/apps/details?id=com.alamgir.rashifal_new",
+  about:"Bangla Rashifal helps Bengali-speaking users explore daily horoscope information for all 12 zodiac signs. Enter your birth date to find your zodiac sign and read the daily forecast, including lucky numbers and lucky colours. The app offers a simple interface and dark mode, and is described as free to use.",
+  features:["Daily horoscope updates for your zodiac sign","Use your birth date to find your zodiac sign","Detailed daily horoscope analysis","View the day's lucky number and lucky colour","Information for all 12 zodiac signs: Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, and Pisces","Simple, user-friendly interface","Dark mode support","Free to use"],
+  note:"Horoscope content is for entertainment and personal interest; it should not be treated as a guaranteed prediction."
+ },
+ "life-simulator-one": {
+  title:"Life Simulator One",category:"Finance · Planning",
+  logo:"app7.png.png",play:"https://play.google.com/store/apps/details?id=com.alamgirappstudio.lifesimulatorone",
+  about:"Life Simulator One is a personal finance planning app that helps you model real-life choices before making them. Build hypothetical scenarios for a new job, moving city, buying a car, changing careers, and more, then compare projected income, expenses, savings, debt, cash flow, and net worth. Results are estimates based on the numbers and assumptions you enter.",
+  features:["Create a financial profile with income, savings, debt, expenses, rent or mortgage, and investments","View a dashboard for monthly income, expenses, savings, debt, net worth, and cash flow","Create and compare unlimited life scenarios against your current situation","Compare projected savings over five years","Buy-versus-rent simulator for 5, 10, and 20 years","Car purchase, debt payoff, savings goal, investment, retirement, inflation, and net worth calculators","Estimate family-related cost changes and compare cities or countries","Compare staying in a career with switching careers over five years","What If? tool to estimate the 1-, 5-, and 10-year impact of a changed number","Future Timeline slider that updates projected savings","Calculation-based risk alerts for negative cash flow, low emergency funds, or high debt relative to income","Track goals such as buying a home or car, clearing debt, education, vacation, emergency fund, and retirement","Couple Mode for combined finances and shared goals","Export a PDF report of your profile, scenarios, goals, and projections","Back up and restore data using a unique Backup Code without signing in"],
+  note:"All projections are hypothetical estimates based on user-entered assumptions. They are not guaranteed returns and are not financial, tax, or investment advice. Consult a qualified professional for personalized guidance."
+ },
+ "dream-app": {
+  title:"Dream App",category:"Books & Reference",
+  logo:"app8.png.jpg",play:"https://play.google.com/store/apps/details?id=com.alamgir.shopnerbekkha",
+  about:"Dream App provides Bengali-language Islamic dream interpretations based on the supplied description's reference to works attributed to Allama Ibn Sirin (رحঃ). It includes more than 100 interpretations organized into categories, with search and bookmarks for convenient offline reading.",
+  features:["Explore 100+ Islamic dream interpretations","Search for subjects such as snakes, water, fire, and gold","Browse interpretations in 8 categories","Bookmark interpretations for later reading","Use the app offline","Read content in Bengali"],
+  note:"Interpretations are presented as reference content and should not be treated as certain predictions or religious rulings."
+ }
 };
-const key=new URLSearchParams(window.location.search).get("app");const app=appDetails[key];const content=document.getElementById("appContent");document.getElementById("year").textContent=new Date().getFullYear();
-function makeLink(url,label,cls){if(!url)return null;const a=document.createElement("a");a.href=url;a.className="button "+cls;a.textContent=label;if(url.startsWith("https://")){a.target="_blank";a.rel="noopener noreferrer"}return a}
-if(!app){document.title="App Not Found | Alamgir Hosen";const box=document.createElement("section");box.className="message";const h=document.createElement("h1");h.textContent="Application Not Found";const p=document.createElement("p");p.textContent="This application could not be found. Please return to the portfolio.";const a=document.createElement("a");a.href="./";a.textContent="Return to All Applications";box.append(h,p,a);content.appendChild(box)}else{document.title=app.name+" | Alamgir Hosen";const hero=document.createElement("section");hero.className="hero";const logo=document.createElement("img");logo.className="app-logo";logo.src=app.logo;logo.alt=app.name+" app icon";logo.onerror=()=>{const p=document.createElement("div");p.className="app-placeholder";p.textContent=app.name.charAt(0).toUpperCase();logo.replaceWith(p)};const h=document.createElement("h1");h.textContent=app.name;const cat=document.createElement("p");cat.className="subtitle";cat.textContent=app.category;const actions=document.createElement("div");actions.className="actions";actions.appendChild(makeLink(app.playStoreUrl,"View on Google Play ↗","primary"));const privacy=makeLink(app.privacyUrl,"Privacy Policy","secondary");if(privacy)actions.appendChild(privacy);hero.append(logo,h,cat,actions);const about=document.createElement("section");about.className="section";const ah=document.createElement("h2");ah.textContent="About This App";const desc=document.createElement("p");desc.textContent=app.description;about.append(ah,desc);const fs=document.createElement("section");fs.className="section";const fh=document.createElement("h2");fh.textContent="Key Features";const list=document.createElement("ul");list.className="features";app.features.forEach(feature=>{const li=document.createElement("li");li.textContent=feature;list.appendChild(li)});fs.append(fh,list);const dev=document.createElement("section");dev.className="section";const dh=document.createElement("h2");dh.textContent="Developer";const dp=document.createElement("p");dp.textContent="Developed by Alamgir Hosen.";dev.append(dh,dp);content.append(hero,about,fs,dev)}
-</script></body></html>
+const params=new URLSearchParams(location.search);
+const key=params.get("app") || "baby-memory-book";
+const a=apps[key];
+const root=document.getElementById("app");
+document.getElementById("year").textContent=new Date().getFullYear();
+if(!a){root.innerHTML='<section class="not-found"><h1>App not found</h1><p>Please return to the portfolio and select an app.</p><a class="btn" href="./">Back to Portfolio</a></section>';}
+else{
+ root.innerHTML=`
+ <section class="hero">
+  <img class="logo" src="${a.logo}" alt="${a.title} app icon" onerror="this.style.display='none'">
+  <div><div class="eyebrow">Alamgir App Studio · ${a.category}</div><h1>${a.title}</h1><p class="subtitle">App overview, description and key features</p>
+  <div class="actions"><a class="btn" href="${a.play}" target="_blank" rel="noopener noreferrer">View on Google Play ↗</a><a class="btn secondary" href="./">All Apps</a></div></div>
+ </section>
+ <section class="grid">
+  <article class="card"><h2>About This App</h2><p>${a.about}</p><p>${a.note || ""}</p></article>
+  <aside class="card"><h2>Key Features</h2><ul class="features">${a.features.map(f=>`<li>${f}</li>`).join("")}</ul></aside>
+ </section>`;
+}
+</script>
+</body>
+</html>
